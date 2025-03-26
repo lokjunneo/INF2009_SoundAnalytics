@@ -5,7 +5,14 @@ import matplotlib.pyplot as plt
 
 import librosa # Used for speech feature extraction: https://librosa.org/doc/
 
-y, sr = librosa.load("test.wav", sr=None) #Save the microphone recording as test.wav 
+# Piano
+# y, sr = librosa.load("665446__hewnmarrow__piano-in-11_8-333.wav", sr=None)
+
+# Person talking (clean)
+# y, sr = librosa.load("217135__catman933__voice.wav", sr=None)
+
+# Talking w noisy background
+y, sr = librosa.load("343677__dpsa__sp07_exhibition_sn-5.wav", sr=None)
 
 #%% Compute the spectrogram magnitude and phase
 S_full, phase = librosa.magphase(librosa.stft(y))
